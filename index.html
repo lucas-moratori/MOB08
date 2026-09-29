@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App - Híbrido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card-app">
+    <h2>🚀 Pedido com Localização</h2>
+    <p>Preencha, Capture o endereço via GPS e envie por WhatsApp.</p>
+
+    <label>👤 Seu nome</label>
+    <input type="text" id="appNome" placeholder="Digite seu nome">
+
+    <label>📝 O que você precisa?</label>
+    <textarea id="appPedido" rows="3" placeholder="Descreva seu pedido..."></textarea>
+
+    <label>📞 WhatsApp do destino</label>
+    <input type="tel" id="appZap" value="5532999999999" placeholder="5532999999999" inputmode="numeric">
+
+    <button class="btn-local" onclick="capturarGpsApp()">📍 Capturar Minha Localização</button>
+
+    <div class="local-app" id="appGps">
+        <span class="vazio">Localização não capturada</span>
+    </div>
+
+    <button class="btn-enviar" onclick="enviarPedidoZap()">💬 Enviar Pedido por WhatsApp</button>
+    <button class="btn-compartilhar" onclick="compartilharPedido()">📤 Compartilhar Pedido</button>
+
+    <div class="resultado-app" id="resultadoApp">
+        <span class="vazio">Aguardando ação</span>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
